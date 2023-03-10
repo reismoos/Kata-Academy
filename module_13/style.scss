@@ -81,6 +81,7 @@ body {
     display: flex;
     gap: 16px;
     position: relative;
+    overflow: hidden;
 }
 
 .visible-btns__leave-applicatoin {
@@ -344,6 +345,7 @@ main {
 
     .visible-btns {
         gap: 160px;
+        overflow: visible;
     }
 
     .visible-btns__leave-applicatoin::before {
