@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url(./src/fonts/TTLakes-Regular.woff2),
+         url(./src/fonts/TTLakes-Regular.woff);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url(./src/fonts/TTLakes-Bold.woff2),
+         url(./src/fonts/TTLakes-Bold.woff);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url(./src/fonts/TTLakes-Medium.woff2),
+         url(./src/fonts/TTLakes-Medium.woff);
+    font-style: normal;
+    font-weight: 500;
+}
+
+ 
+* {
+    box-sizing: border-box;
+    font-family: 'TT Lakes';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 320px;
+}
+
+.repair__text {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    margin: 0;
+    display: block;
+    background-color: white;
+    padding: 16px;
+}
+
+.repair-slider-container {
+    padding: 16px;
+    background: #F2F2F2;
+    overflow: hidden;
+    position: relative;
+}
+
+.repair-slider-container::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    width: 24px;
+    height: 81px;
+    right: 0;
+    z-index: 2;
+}
+
+.swiper-slide {
+    width: 240px;
+    height: 72px;
+}
+
+.repair-slider__slide {
+    background-color: #fff;
+    padding: 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+}
+
+.repair-slider__logo {
+    flex: 0 0 auto;
+}
+
+.repair-slider__btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+    position: relative;
+}
+
+.repair-slider__btn::after {
+    content: '';
+    position: absolute;
+    border-right: 2px solid #FF3E79;
+    border-top: 2px solid #FF3E79;
+    transform:  translateX(10px) translateY(12px) rotate(45deg);
+    width: 9px;
+    height: 9px;
+    
+}
+
+.swiper-pagination-bullet {
+    background: #DDDDDD;;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #B5B6BC;
+}
+
+.repair__pagination {
+    margin-left: 40px;
+    margin-top: 16px;
+    
+}
+
+.repair__show-all {
+    display: none;
+}
+
+
+//start 768px
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        width: 768px;
+    }
+
+    .repair__text{
+        padding-left: 24px;
+    }
+
+    .repair-slider-container {
+        padding: 24px;
+    }
+
+    .repair-slider {
+        height: 158px;
+    }
+
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        row-gap: 16px;
+        column-gap: 24px;
+        overflow: hidden;
+    }
+
+    .repair-slider__slide {
+        width: 224px;
+    }
+
+    .repair__pagination {
+        margin-top: 24px;
+    }
+
+    .repair__show-all {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        position: relative;
+        margin-left: 33px;
+        transition: 0.2s;
+        --rotate: 0;
+    }
+
+    .repair__show-all::before {
+        content: "";
+        background-image: url(./src/img/icons/arrows.svg);
+        position: absolute;
+        left: -33px;
+        width: 24px;
+        height: 24px;
+        transition: 0.2s;
+        transform: rotate(var(--rotate))
+    }
+
+    .repair__show-all:hover {
+        cursor: pointer;
+        text-shadow: 1px 1px 2px #868686;
+    }
+
+    .repair-slider--full {
+        height: auto;
+    }
+
+}
+
+// end 768 px
+
+// start 1120 px
+@media screen and (min-width: 1120px) {
+    .wrapper {
+        width: 1120px;
+    }
+
+    .repair__text{
+        padding-left: 32px;
+    }
+
+    .repair-slider-container {
+        padding-left: 32px;
+    }
+
+    .repair-slider {
+        height: 158px;
+    }
+
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        row-gap: 16px;
+        column-gap: 32px;
+        overflow: hidden;
+    }
+
+    .repair-slider__slide {
+        width: 240px;
+    }
+
+    .repair__pagination {
+        margin-top: 24px;
+    }
+
+    .repair-slider--full {
+        height: auto;
+    }
+}
