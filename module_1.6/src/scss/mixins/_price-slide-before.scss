@@ -1,0 +1,9 @@
+@mixin price-slide-before {
+    font-size: 14px;
+    line-height: 16px;
+    color: $price-slide-before;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    top: -20px;
+    position: absolute;
+}

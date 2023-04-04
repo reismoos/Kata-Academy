@@ -1,0 +1,19 @@
+
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "vars";
+@import "body-container";
+@import "popup-burger-menu";
+@import "main320px";
+@import "main768px";
+@import "main1440px";
+@import "modal-window-call";
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'TT Lakes';
+  font-style: normal;
+  font-weight: 400;
+}
